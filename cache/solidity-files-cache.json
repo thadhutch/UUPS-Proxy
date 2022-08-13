@@ -301,6 +301,44 @@
         }
       }
     },
+    "src/Proxiable.sol": {
+      "lastModificationDate": 1660373923592,
+      "contentHash": "fb9436811a58a6c4c1f09be3831974ab",
+      "sourceName": "src/Proxiable.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs"
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.13",
+      "artifacts": {
+        "Proxiable": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "Proxiable.sol/Proxiable.json"
+        }
+      }
+    },
     "src/Proxy.sol": {
       "lastModificationDate": 1660373562868,
       "contentHash": "a7dd27e4c7dae5a1596a10e28ec0daef",
