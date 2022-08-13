@@ -463,10 +463,10 @@
         }
       }
     },
-    "test/Contract.t.sol": {
-      "lastModificationDate": 1660372442256,
-      "contentHash": "848ba83feec29a2e4d286c118102ae20",
-      "sourceName": "test/Contract.t.sol",
+    "test/Proxy.t.sol": {
+      "lastModificationDate": 1660418763269,
+      "contentHash": "0d0c530fabdcf1cfc507a31dec82ea1b",
+      "sourceName": "test/Proxy.t.sol",
       "solcConfig": {
         "settings": {
           "optimizer": {
@@ -499,12 +499,15 @@
         "lib/forge-std/src/Test.sol",
         "lib/forge-std/src/Vm.sol",
         "lib/forge-std/src/console.sol",
-        "lib/forge-std/src/console2.sol"
+        "lib/forge-std/src/console2.sol",
+        "src/Counter.sol",
+        "src/Proxiable.sol",
+        "src/Proxy.sol"
       ],
       "versionRequirement": "^0.8.13",
       "artifacts": {
         "ContractTest": {
-          "0.8.15+commit.e14f2714.Darwin.appleclang": "Contract.t.sol/ContractTest.json"
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "Proxy.t.sol/ContractTest.json"
         }
       }
     }
