@@ -258,10 +258,10 @@
         }
       }
     },
-    "script/Contract.s.sol": {
-      "lastModificationDate": 1660372442256,
-      "contentHash": "3642d05d9c479368231825c40aaa276a",
-      "sourceName": "script/Contract.s.sol",
+    "script/CounterDeploy.s.sol": {
+      "lastModificationDate": 1660414015051,
+      "contentHash": "2d77a39446ec0cfa0eeb186ee67d5c3d",
+      "sourceName": "script/CounterDeploy.s.sol",
       "solcConfig": {
         "settings": {
           "optimizer": {
@@ -292,12 +292,98 @@
         "lib/forge-std/src/Script.sol",
         "lib/forge-std/src/Vm.sol",
         "lib/forge-std/src/console.sol",
-        "lib/forge-std/src/console2.sol"
+        "lib/forge-std/src/console2.sol",
+        "src/Counter.sol",
+        "src/Proxiable.sol"
       ],
       "versionRequirement": "^0.8.13",
       "artifacts": {
-        "ContractScript": {
-          "0.8.15+commit.e14f2714.Darwin.appleclang": "Contract.s.sol/ContractScript.json"
+        "DeployScript": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "CounterDeploy.s.sol/DeployScript.json"
+        }
+      }
+    },
+    "script/ProxyDeploy.s.sol": {
+      "lastModificationDate": 1660415750596,
+      "contentHash": "22f8de6c121c7d5044263af02848654a",
+      "sourceName": "script/ProxyDeploy.s.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs"
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/src/Script.sol",
+        "lib/forge-std/src/Vm.sol",
+        "lib/forge-std/src/console.sol",
+        "lib/forge-std/src/console2.sol",
+        "src/Proxy.sol"
+      ],
+      "versionRequirement": "^0.8.13",
+      "artifacts": {
+        "DeployScript": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "ProxyDeploy.s.sol/DeployScript.json"
+        }
+      }
+    },
+    "src/Counter.sol": {
+      "lastModificationDate": 1660374458740,
+      "contentHash": "cf0d8505b4e5fc75429f123b5b349d85",
+      "sourceName": "src/Counter.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs"
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "src/Proxiable.sol"
+      ],
+      "versionRequirement": "^0.8.13",
+      "artifacts": {
+        "Counter": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "Counter.sol/Counter.json"
         }
       }
     },
