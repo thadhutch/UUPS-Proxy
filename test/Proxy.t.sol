@@ -3,31 +3,37 @@ pragma solidity ^0.8.13;
 
 import "forge-std/Test.sol";
 
-import {Counter} from "../src/Counter.sol";
-import {Proxy} from "../src/Proxy.sol";
+import {Pizza} from "../src/Pizza.sol";
+import {PizzaV2} from "../src/PizzaV2.sol";
+
+import {ERC1967Proxy} from "openzeppelin/proxy/ERC1967/ERC1967Proxy.sol";
 
 contract ContractTest is Test {
 
-    Counter internal counter;
-    Proxy internal proxy;
+    Pizza internal pizza;
+    PizzaV2 internal pizzaV2;
+    ERC1967Proxy internal proxy;
 
     function setUp() public {
-
-    counter = new Counter();
-
-    bytes memory initializerData = abi.encodeWithSignature('initialize()', "");
-    proxy = new Proxy(initializerData, address(counter));
-
-
+        pizza = new Pizza();
+        pizzaV2 = new PizzaV2();
+        proxy = new ERC1967Proxy(address(pizza), "");
+        pizza = Pizza(address(proxy));
+        pizza.initialize(8);
+        pizza.eatSlice();
     }
 
-    function testIncrement() public {
-        (bool success, ) = address(proxy).delegatecall(abi.encode("increment()"));
-        assertEq(success, true);
+    function testEat() public {
+        assertEq(pizza.slices(), 7);
+    }
 
-        (bool success1, bytes memory returnData) = address(proxy).delegatecall(abi.encode("count()"));
-        assertEq(success1, true);
-        emit logs(returnData);
+    function testUpgrade() public {
+        pizza.upgradeTo(address(pizzaV2));
+        pizzaV2 = PizzaV2(address(proxy));
+        assertEq(pizzaV2.pizzaVersion(), 2);
+        assertEq(pizzaV2.slices(), 7);
+        pizzaV2.refillSlice();
+        assertEq(pizzaV2.slices(), 8);
     }
 
     function testUpgradeFail() public {
