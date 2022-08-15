@@ -8,7 +8,7 @@ import {PizzaV2} from "../src/PizzaV2.sol";
 
 import {ERC1967Proxy} from "openzeppelin/proxy/ERC1967/ERC1967Proxy.sol";
 
-contract ContractTest is Test {
+contract ProxyTest is Test {
 
     Pizza internal pizza;
     PizzaV2 internal pizzaV2;
@@ -34,6 +34,8 @@ contract ContractTest is Test {
         assertEq(pizzaV2.slices(), 7);
         pizzaV2.refillSlice();
         assertEq(pizzaV2.slices(), 8);
+        pizzaV2.eatSlice();
+        assertEq(pizzaV2.slices(), 7);
     }
 
     function testUpgradeFail() public {

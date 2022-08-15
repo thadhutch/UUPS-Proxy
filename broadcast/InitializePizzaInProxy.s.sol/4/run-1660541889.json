@@ -1,0 +1,28 @@
+{
+  "transactions": [
+    {
+      "hash": "0x9de8254b200b3d5a1468317dc38396fba08a1d6e4dca1680eef6e9dca699c234",
+      "type": "CALL",
+      "contractName": "ERC1967Proxy",
+      "contractAddress": "0x2d3928d6e78defb366c01208b6b1ba07998b38d4",
+      "tx": {
+        "type": "0x02",
+        "from": "0x8289d6a2ed28e4b52edf32662ecd54e7033f76b1",
+        "to": "0x2d3928d6e78defb366c01208b6b1ba07998b38d4",
+        "gas": "0x1ea32",
+        "value": "0x0",
+        "data": "0xfe4b84df0000000000000000000000000000000000000000000000000000000000000008",
+        "nonce": "0x1ba",
+        "accessList": []
+      }
+    }
+  ],
+  "receipts": [],
+  "libraries": [],
+  "pending": [
+    "0x9de8254b200b3d5a1468317dc38396fba08a1d6e4dca1680eef6e9dca699c234"
+  ],
+  "path": "broadcast/InitializePizzaInProxy.s.sol/4/run-latest.json",
+  "returns": {},
+  "timestamp": 1660541889
+}

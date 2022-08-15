@@ -1,0 +1,45 @@
+{
+  "transactions": [
+    {
+      "hash": "0x545e4605c74644ecbb2f005d4f86762bf4e44a0cb1ee261d4ceea8e304c97b8f",
+      "type": "CALL",
+      "contractName": "ERC1967Proxy",
+      "contractAddress": "0x2d3928d6e78defb366c01208b6b1ba07998b38d4",
+      "tx": {
+        "type": "0x02",
+        "from": "0x8289d6a2ed28e4b52edf32662ecd54e7033f76b1",
+        "to": "0x2d3928d6e78defb366c01208b6b1ba07998b38d4",
+        "gas": "0xc6c0",
+        "value": "0x0",
+        "data": "0x3659cfe6000000000000000000000000cbcf82cf306827eff97afeeddf3bf4cb9cd913ad",
+        "nonce": "0x1bb",
+        "accessList": []
+      }
+    },
+    {
+      "hash": "0x4720f183793677c0de7515e38b5a1c378c6dad7ba56b2a57d93ba11b6afcf864",
+      "type": "CALL",
+      "contractName": "ERC1967Proxy",
+      "contractAddress": "0x2d3928d6e78defb366c01208b6b1ba07998b38d4",
+      "tx": {
+        "type": "0x02",
+        "from": "0x8289d6a2ed28e4b52edf32662ecd54e7033f76b1",
+        "to": "0x2d3928d6e78defb366c01208b6b1ba07998b38d4",
+        "gas": "0x9ebf",
+        "value": "0x0",
+        "data": "0xf63da92e",
+        "nonce": "0x1bc",
+        "accessList": []
+      }
+    }
+  ],
+  "receipts": [],
+  "libraries": [],
+  "pending": [
+    "0x545e4605c74644ecbb2f005d4f86762bf4e44a0cb1ee261d4ceea8e304c97b8f",
+    "0x4720f183793677c0de7515e38b5a1c378c6dad7ba56b2a57d93ba11b6afcf864"
+  ],
+  "path": "broadcast/ProxyUpgrade.s.sol/4/run-latest.json",
+  "returns": {},
+  "timestamp": 1660543362
+}
