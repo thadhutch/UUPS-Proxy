@@ -1,12 +1,12 @@
 # Foundry UUPS example
 Uses OpenZeppelin UUPS proxy pattern.
-## install
+## Install
 `forge install`
 
-## test
+## Test
 `forge test`
 
-## deploy and verify
+## Deploy and Verify
 ### .env
 PIZZA_ADDRESS is necessary, when deploying ERC1967Proxy.sol.
 Set PIZZA_ADDRESS, after deploying Pizza.sol
@@ -20,9 +20,16 @@ PIZZA_ADDRESS=*****
 ### Pizza.sol
 `source script/DeployVerifyPizza.sh `
 ### ERC1967Proxy.sol
-`source script/deploy-and-verify-proxy.sh`
+`source script/deploy/DeployVerifyProxy.sh`
 ### PizzaV2.sol
-`source script/deploy-and-verify-pizzaV2.sh`
+`source script/DeployVerifyPizzaV2.sh`
+
+## Initialize and Upgrade
+
+### Initialize
+`source script/run-scripts/InitializePizza.sh`
+### Upgrade
+`source script/run-scripts/ProxyUpgrade.sh`
 
 ## Deployed Contracts
 
